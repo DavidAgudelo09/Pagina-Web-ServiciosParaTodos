@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+:root{
+    --container-color: #1a1e21;
+    --second-color:#fd8f44;
+    --text-color:#172317;
+    --bg-color:#fff;
+}
+
+::selection{
+    color: var(--bg-color);
+    background-color: var(--second-color);
+}
+body {
+    background-color: var(--container-color);
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.register {
+    width: 400px;
+    background-color: var(--container-color);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.register h1 {
+    text-align: center;
+    color: var(--bg-color);
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+}
+.register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+   height: 50px;
+    background-color: var(--second-color);
+    color: #ffffff;
+}
+.register form input[type="file"] {
+    display: none;
+    
+}
+.custom-file-upload {
+    
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.register form .custom-file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: var(--second-color);
+    color: #ffffff;
+}
+.register form .class-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 15px;
+    background-color: var(--second-color);
+    color: #ffffff;
+}
+
+.register form .birthdate-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 15px;
+    padding: 5px;
+    background-color: var(--second-color);
+    color: #ffffff;
+}
+.register form select {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    width: 210px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-right: 35px;
+   
+}
+
+.register form input[type="password"], .register form input[type="text"], .register form input[type="email"], .register form input[name="servicetype"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.register form textarea{
+    width: 360px;
+    height: 100px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+
+}
+
+.register form input[type="date"]{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+
+}
+
+.register form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: var(--second-color);
+   border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.register form input[type="submit"]:hover {
+  background-color: #f76300;
+    transition: background-color 0.2s;
+}
+ /*Header*/
+ header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    padding-left: 50px;
+    background: var(--container-color);
+
+ }
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: 0.4s;
+}
+
+header.shadow .logo{
+    color: var(--text-color);
+}
+ .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+ }
+ .logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+ }
+.logo span{
+    color: var(--second-color);
+}
+/*Responsive*/
+
+@media(max-width:1060px){
+    .container{
+        margin: 0 auto;
+        width: 95%;
+    
+    }
+    .home-text{
+        width: 100%;
+    }
+
+}
+@media(max-width:800px){
+    .nav{
+        padding: 14px 0;
+     }
+     .post-container{
+        margin: 0 auto;
+        width: 95%;
+     }
+}
+@media(max-width:768px){
+    .nav{
+        padding: 10px 0;
+     }
+    section{
+        padding: 2rem 0;
+
+     }
+     .header-content{
+        margin-top: 3rem !important;
+     }
+     .home{
+       min-height: 380px;
+     }
+     .home-title{
+        font-size: 3rem;
+     }
+     .header-title{
+        font-size: 2rem;
+     }
+     .header-img{
+        height: 370px;
+     }
+     .post-header{
+        height: 435px;
+
+     }
+     .post-content{
+        margin-top: 9rem !important;
+
+     }
+}
+
+@media(max-width:570px){
+    .header-title{
+        width: 100%;
+     }
+     .header-img{
+        height: 340px;
+     }
+     .post-header{
+        height: 390px;
+
+     }
+     .footer{
+      flex-direction: column;
+      row-gap: 1rem;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+}
+
+
+@media(max-width:396px){
+    .home-title{
+        font-size: 2rem;
+    }
+    .home-subtitle{
+        font-size: 0.9rem;
+    }
+    .home{
+        min-height: 300px;
+    }
+    .post-box{
+        padding: 10px;
+    }
+    .header-title{
+        font-size: 1.4rem;
+    }
+    .header-img{
+        height: 240px;
+    }
+    .post-header{
+        height: 335px;
+    }
+    .post-content{
+        margin-top: 5rem !important;
+    }
+
+    .post-text{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        margin: 10px 0;
+        text-align: justify;
+    }
+}

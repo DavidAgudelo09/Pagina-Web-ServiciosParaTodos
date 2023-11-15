@@ -1,0 +1,15 @@
+<?php
+if (isset($_FILES['photo'])) {
+  $target_dir = "uploads/";
+  $target_file = $target_dir . basename($_FILES['photo']['name']);
+
+  if (move_uploaded_file($_FILES['photo']['tmp_name'], $target_file)) {
+    // La foto se ha cargado correctamente, guardar la ruta en la base de datos
+    $ruta_foto = $target_file; // Aquí guardas la ruta de la foto en una variable
+    // Aquí haces la consulta SQL para guardar la ruta de la foto en la base de datos
+  } else {
+    // Si hay un error al cargar la foto, mostrar un mensaje de error al usuario
+    echo "Error al cargar la foto.";
+  }
+}
+?>

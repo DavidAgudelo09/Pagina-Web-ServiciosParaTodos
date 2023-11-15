@@ -1,0 +1,23 @@
+CREATE TABLE providers (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  lastname VARCHAR(50) NOT NULL,
+  phonenumber VARCHAR(20),
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  service_type VARCHAR(50),
+  company_name VARCHAR(50),
+  service_name VARCHAR(50),
+  personal_descripcion TEXT,
+  PRIMARY KEY (id)
+);
+
+CREATE TRIGGER insertion2 AFTER INSERT ON providers
+ FOR EACH ROW INSERT INTO allusers(email, password, tableid, account_type)
+  VALUES(NEW.email,NEW.password,NEW.id,2)
+
+CREATE TRIGGER updateonproviders AFTER UPDATE ON providers
+FOR EACH ROW
+UPDATE allusers
+SET allusers.password = NEW.password
+WHERE allusers.email=NEW.email

@@ -1,0 +1,21 @@
+CREATE TABLE users(
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  lastname VARCHAR(50) NOT NULL,
+  phonenumber VARCHAR(20),
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  birthdate DATE,
+  PRIMARY KEY (id)
+);
+
+CREATE TRIGGER insertion AFTER INSERT ON users
+ FOR EACH ROW 
+  INSERT INTO allusers(email, password, tableid, account_type)
+  VALUES(NEW.email,NEW.password,NEW.id,1);
+
+CREATE TRIGGER updateonusers AFTER UPDATE ON users
+FOR EACH ROW
+UPDATE allusers
+SET allusers.password = NEW.password
+WHERE allusers.email=NEW.email

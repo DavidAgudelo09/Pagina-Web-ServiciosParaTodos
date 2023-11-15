@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link href="css/style_login.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<!--Nav-->
+			<div class="nav container">
+				<!--Logo-->
+				<a href="index.php" class="logo">Servicios<span>Para</span>Todos</a>			 
+			</div>    
+	   
+		</header>
+		<div class="login">
+			<h1>Login</h1>
+			<form action="authenticate.php" method="post">
+				<label for="email">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="email" placeholder="Correo" id="email" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Contraseña" id="password" required>
+				<span class="psw"><a href="recover_password.html">¿Olvido Contraseña?</a></span>
+				
+				<input type="submit" value="Login">
+				Aun no tiene cuenta? <span class="psw"><a href="choose_user.html">Registrate?</a></span>
+			</form>
+		</div>
+	</body>
+</html>

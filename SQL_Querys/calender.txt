@@ -1,0 +1,20 @@
+
+CREATE TABLE calender ( id INT(11) NOT NULL AUTO_INCREMENT, email VARCHAR(100) NOT NULL, link TEXT, PRIMARY KEY (id) );
+
+
+
+------------------------
+juan@email.com
+<!-- Leadmonk inline widget begin -->
+    <div class="leadmonk-inline-widget" data-url="https://ldmk.io/davidjq1221-5158/30min?hideLogo=true&pagebackground=0xffffff" style="min-width:350px;height:750px;"></div>
+    <script type="text/javascript" src="https://firebasestorage.googleapis.com/v0/b/leadmonk-prod.appspot.com/o/leadmonk%2Fembed%2Fleadmonk_widget.js?alt=media" async></script>
+ <!-- Leadmonk inline widget end -->
+
+
+----------------------------
+
+pedro@perez.com
+<!-- Leadmonk inline widget begin -->
+    <div class="leadmonk-inline-widget" data-url="https://ldmk.io/davidjq1221-5158/short_meeting?hideLogo=true&pagebackground=0xffffff" style="min-width:350px;height:750px;"></div>
+    <script type="text/javascript" src="https://firebasestorage.googleapis.com/v0/b/leadmonk-prod.appspot.com/o/leadmonk%2Fembed%2Fleadmonk_widget.js?alt=media" async></script>
+ <!-- Leadmonk inline widget end -->
